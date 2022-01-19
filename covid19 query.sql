@@ -20,4 +20,11 @@ select SUM(confirmed) AS sumconfirmed, SUM(recovered) AS sumrecovered, SUM(death
 select confirmed, deaths, recovered, countryregion from covid_19_data 
 where countryregion LIKE 'Mainland China'
 
+--Retrieve information for the top 5 countries with the highest confirmed cases.
+SELECT  SUM(onfirmed) AS Top_Confirmed, countryregion
+FROM covid_19_data
+GROUP BY countryregion
+ORDER BY SUM(confirmed) desc
+LIMIT  5 
+
 
