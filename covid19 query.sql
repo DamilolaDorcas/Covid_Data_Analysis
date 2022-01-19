@@ -10,3 +10,10 @@ LIMIT 5
 select * from covid_19_data 
 where observationdate BETWEEN '2020-01-22' AND '2020-01-31'
 
+--Retrieve a summary of all the records. This should include the following information for each country/region:
+-- The total number of confirmed cases 
+-- The total number of deaths
+-- The total number of recoveries
+select SUM(confirmed) AS sumconfirmed, SUM(recovered) AS sumrecovered, SUM(deaths) AS sumdeaths from covid_19_data
+
+
