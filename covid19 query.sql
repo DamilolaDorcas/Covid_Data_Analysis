@@ -16,4 +16,8 @@ where observationdate BETWEEN '2020-01-22' AND '2020-01-31'
 -- The total number of recoveries
 select SUM(confirmed) AS sumconfirmed, SUM(recovered) AS sumrecovered, SUM(deaths) AS sumdeaths from covid_19_data
 
+--Retrieve the number of confirmed cases, deaths, and recoveries for MainlandChina
+select confirmed, deaths, recovered, countryregion from covid_19_data 
+where countryregion LIKE 'Mainland China'
+
 
