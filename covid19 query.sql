@@ -6,3 +6,7 @@ GROUP BY countryregion
 ORDER BY SUM(recovered) DESC
 LIMIT 5
 
+--Retrieve the records for the following observation dates - 1/22/2020, 1/27/2020, 1/31/2020
+select * from covid_19_data 
+where observationdate BETWEEN '2020-01-22' AND '2020-01-31'
+
